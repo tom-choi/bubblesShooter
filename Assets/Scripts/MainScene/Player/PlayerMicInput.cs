@@ -1,3 +1,4 @@
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 
 public class PlayerMicInput : MonoBehaviour
@@ -9,6 +10,10 @@ public class PlayerMicInput : MonoBehaviour
 
     void Start()
     {
+        for (int i = 0; i < Microphone.devices.Length; i++)
+        {
+            // Debug.Log(Microphone.devices[i]);
+        }
         // 獲取默認麥克風
         string mic = Microphone.devices[0];
         audioClip = Microphone.Start(mic, true, 10, 44100);
@@ -17,7 +22,7 @@ public class PlayerMicInput : MonoBehaviour
     void Update()
     {
         float loudness = GetAveragedVolume();
-        if (loudness > 0.1f) // 根據需要調整閾值
+        if (loudness > 0.01f) // 根據需要調整閾值
         {
             Debug.Log("吹氣檢測到！");
         }
