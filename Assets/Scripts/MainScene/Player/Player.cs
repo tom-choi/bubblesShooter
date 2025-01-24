@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
     public int Health = 100;
     public float speed = 10f;
-    
+    // public CanvasGroup canvasGroup;
     
 
     [SerializeField]
@@ -14,13 +15,12 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+        // dotween 設定
+        // canvasGroup.DOFade(0, 0.5f);
     }
     
     void Update()
-    {
-        // 檢查碰撞tag=EnemyBullet
-        
+    {   
         
     }
 
