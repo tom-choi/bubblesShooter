@@ -41,65 +41,78 @@ public class PlayerController : MonoBehaviour
 
     void MoveTypeSelection()
     {
+        Vector3 moveDirection = Vector3.zero;
+
         switch (moveType)
         {
             case "WASD":
                 // WASD
                 if (Input.GetKey(KeyCode.W))
                 {
-                    transform.Translate(Vector3.forward * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.forward;
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
-                    transform.Translate(Vector3.back * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.back;
                 }
                 if (Input.GetKey(KeyCode.A))
                 {
-                    transform.Translate(Vector3.left * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.left;
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
-                    transform.Translate(Vector3.right * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.right;
                 }
                 break;
             case "UDLR":
                 // UDLR
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-                    transform.Translate(Vector3.forward * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.forward;
                 }
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    transform.Translate(Vector3.back * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.back;
                 }
                 if (Input.GetKey(KeyCode.LeftArrow))
                 {
-                    transform.Translate(Vector3.left * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.left;
                 }
                 if (Input.GetKey(KeyCode.RightArrow))
                 {
-                    transform.Translate(Vector3.right * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.right;
                 }
                 break;
             default:
                 // WASD
                 if (Input.GetKey(KeyCode.W))
                 {
-                    transform.Translate(Vector3.forward * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.forward;
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
-                    transform.Translate(Vector3.back * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.back;
                 }
                 if (Input.GetKey(KeyCode.A))
                 {
-                    transform.Translate(Vector3.left * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.left;
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
-                    transform.Translate(Vector3.right * Time.deltaTime * player.speed);
+                    moveDirection += Vector3.right;
                 }
                 break;
+        }
+
+        // 移動角色
+        if (moveDirection != Vector3.zero)
+        {
+            // 移動
+            transform.Translate(moveDirection.normalized * Time.deltaTime * player.speed);
+
+            // 旋轉角色
+            Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+            player.PlayerModel.transform.rotation = toRotation;
         }
     }
 }

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public int Health = 100;
     public float speed = 10f;
+    public GameObject PlayerModel;
     // public CanvasGroup canvasGroup;
     
 
