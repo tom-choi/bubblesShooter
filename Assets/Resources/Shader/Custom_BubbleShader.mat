@@ -27,16 +27,16 @@ Material:
     m_Floats:
     - _ChromaticAberration: 0.0188
     - _ChromaticIntensity: 0.1
-    - _DistortionAmount: 0.342
+    - _DistortionAmount: 0.415
     - _DistortionScale: 10
     - _DistortionSpeed: 0.35
     - _FlowSpeed: 0.5
     - _FoamContrast: 0.2
-    - _FoamDensity: 25.7
+    - _FoamDensity: 56.8
     - _FoamIntensity: 0.3
     - _FoamSpeed: 0.5
     - _FresnelIntensity: 1
-    - _FresnelPower: 6.76
+    - _FresnelPower: 9.65
     - _Glossiness: 1
     - _MaxAlpha: 0.8
     - _MinAlpha: 0.359
