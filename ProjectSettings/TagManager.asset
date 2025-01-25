@@ -6,6 +6,8 @@ TagManager:
   tags:
   - EnemyBullet
   - FortBullet
+  - Enemy
+  - FortBullet_auto
   layers:
   - Default
   - TransparentFX
