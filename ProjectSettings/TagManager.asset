@@ -8,6 +8,8 @@ TagManager:
   - FortBullet
   - Enemy
   - FortBullet_auto
+  - Barrage_Big
+  - myGround
   layers:
   - Default
   - TransparentFX

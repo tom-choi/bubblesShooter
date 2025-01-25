@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
     public IEnumerator expireTimer()
     {
         yield return new WaitForSeconds(expireTime);
+        
         ObjectPool.Instance.ReturnToPool(tag, gameObject);
     }
 
