@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_NormalCubeShader
-  m_Shader: {fileID: 4800000, guid: da5d4d193635f234fb5496d6673618c2, type: 3}
+  m_Name: LavaCubeShader
+  m_Shader: {fileID: 4800000, guid: bcadc0c039c1fc3489215762a4f7033e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,12 +24,18 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2670a0239909eb94f91f03a76cd6165c, type: 3}
+        m_Texture: {fileID: 2800000, guid: cfb588441e56f704e928f89b79c9094e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ColorDistortion: 0.086
+    - _GlowIntensity: 0
     - _IsEdge: 0
+    - _IsNoise: 0.163
+    - _PixelSize: 32
+    - _TimeScale: 5.1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

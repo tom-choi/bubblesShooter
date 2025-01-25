@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Bullet : MonoBehaviour
 
     [SerializeField]
     public bool isAutoChase = false;
+    public bool isPenetrate = false;
     [SerializeField]
     private GameObject enemyTarget;
 
@@ -63,7 +65,10 @@ public class Bullet : MonoBehaviour
             {
                 enemy.SubtractHealth(damage);
                 // Return the bullet to the pool after hitting the enemy
-                ObjectPool.Instance.ReturnToPool(tag, gameObject);
+                if (!isPenetrate)
+                {
+                    ObjectPool.Instance.ReturnToPool(tag, gameObject);
+                }
             }
         }
         else if (other.CompareTag("Player"))
