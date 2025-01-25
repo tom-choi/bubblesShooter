@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     public int damage = 10;
     public Vector3 direction = Vector3.forward;
     
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(expireTimer());
     }
@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     public IEnumerator expireTimer()
     {
         yield return new WaitForSeconds(expireTime);
-        Destroy(gameObject);
+        ObjectPool.Instance.ReturnToPool(tag, gameObject);
     }
 
     void Update()
@@ -25,4 +25,3 @@ public class Bullet : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime);
     }
 }
- 
