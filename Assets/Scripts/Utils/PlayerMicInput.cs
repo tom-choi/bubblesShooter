@@ -21,11 +21,20 @@ public class PlayerMicInput : MonoBehaviour
 
     void Update()
     {
+        
+    }
+
+    public bool isBlowing()
+    {
         float loudness = GetAveragedVolume();
-        if (loudness > 0.01f) // 根據需要調整閾值
-        {
-            Debug.Log("吹氣檢測到！");
-        }
+        return loudness > 0.01f;
+    }
+
+    float GetCurrentVolume()
+    {
+        float loudness = GetAveragedVolume();
+        Debug.Log("當前音量：" + loudness);
+        return loudness; // 返回當前音量
     }
 
     float GetAveragedVolume()
@@ -42,4 +51,5 @@ public class PlayerMicInput : MonoBehaviour
         }
         return sum / sampleWindow;
     }
+    
 }
