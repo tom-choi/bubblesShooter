@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_NormalCubeShader 11
+  m_Name: NormalCubeShader 2
   m_Shader: {fileID: 4800000, guid: da5d4d193635f234fb5496d6673618c2, type: 3}
-  m_Parent: {fileID: 2100000, guid: 70188b3bea108cc42b86e0edd784b4a4, type: 2}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -24,10 +24,18 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2f89be84e50eaf84c860614caefe467a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4ed4c8d09b078e147b5c945a2670096a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _ColorDistortion: 0.031
+    - _GlowIntensity: 0
+    - _IsEdge: 0
+    - _IsNoise: 0.301
+    - _PixelSize: 32
+    - _TimeScale: 4.22
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0.9433962, g: 0.83956325, b: 0.83956325, a: 1}
   m_BuildTextureStacks: []
