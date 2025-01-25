@@ -15,4 +15,14 @@ public static class FortUtils
             bulletComponent.speed = speed;
         }
     }
+    public static void shot(GameObject obj, string bulletTag, Vector3 direction, Vector3 additionOffset, float speed = 10f)
+    {
+        GameObject bullet = ObjectPool.Instance.SpawnFromPool(bulletTag, obj.transform.position + additionOffset, Quaternion.identity);
+        if (bullet != null)
+        {
+            Bullet bulletComponent = bullet.GetComponent<Bullet>();
+            bulletComponent.direction = direction;
+            bulletComponent.speed = speed;
+        }
+    }
 }

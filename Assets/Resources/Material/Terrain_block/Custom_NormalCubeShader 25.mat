@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Custom_NormalCubeShader 25
   m_Shader: {fileID: 4800000, guid: da5d4d193635f234fb5496d6673618c2, type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 9856dc9fde65eb149abbfd91e11fa96e, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -28,8 +28,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _IsEdge: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    m_Floats: []
+    m_Colors: []
   m_BuildTextureStacks: []

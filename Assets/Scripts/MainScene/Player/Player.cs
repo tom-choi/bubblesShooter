@@ -19,23 +19,13 @@ public class Player : MonoBehaviour
         // canvasGroup.DOFade(0, 0.5f);
     }
     
+    // 更新函数
     void Update()
     {   
         
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        // 檢查碰撞的物件是否有標籤 "EnemyBullet"
-        if (collision.gameObject.CompareTag("EnemyBullet"))
-        {
-            Debug.Log("Player hit by enemy bullet!");
-            SubtractHealth(collision.gameObject.GetComponent<Bullet>().damage); 
-            // Destroy(collision.gameObject);
-        }
-    }
-
-    void AddHealth(int val)
+    public void AddHealth(int val)
     {
         Health += val;
         if (Health > 100)
@@ -44,7 +34,7 @@ public class Player : MonoBehaviour
         }
     }
     
-    void SubtractHealth(int val)
+    public void SubtractHealth(int val)
     {
         Health -= val;
         if (Health < 0)
