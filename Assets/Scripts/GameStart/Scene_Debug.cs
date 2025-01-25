@@ -52,7 +52,7 @@ public class Scene_Debug : MonoBehaviour
                 battlestart = true;
                 uI_CharactorDebug.Battle_Start.Play();
 
-                StartCoroutine(BattleStart(2));
+                StartCoroutine(BattleStart(8f));
             }
         }
     }

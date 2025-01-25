@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,11 @@ public class Swipe : MonoBehaviour
     public GameObject scrollbar;
     public float scroll_pos = 0;
     float[] pos;
+    public float MaxSize;
+    public float MinSize;
     public GameObject[] Weapon;
+    public TMP_Text Gear_name;
+    public TMP_Text Gear_Description;
 
     public bool player1;
     public bool player2;
@@ -52,14 +57,14 @@ public class Swipe : MonoBehaviour
         {
             if (scroll_pos > 0)
             {
-                scroll_pos -= 0.25f;
+                scroll_pos -= distance;
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             if (scroll_pos < 1)
             {
-                scroll_pos += 0.25f;
+                scroll_pos += distance;
             }
         }
         else
@@ -77,21 +82,22 @@ public class Swipe : MonoBehaviour
         {
             if (scroll_pos < pos[i] + distance / 2 && scroll_pos > pos[i] - distance / 2)
             {
-                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1, 1), 0.1f);
+                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(MaxSize, MaxSize), 0.1f);
 
                 for (int a = 0; a < pos.Length; a++)
                 {
                     if (a != i)
                     {
-                        transform.GetChild(a).localScale = Vector2.Lerp(transform.GetChild(a).localScale, new Vector2(0.65f, 0.65f), 0.1f);
+                        transform.GetChild(a).localScale = Vector2.Lerp(transform.GetChild(a).localScale, new Vector2(MinSize, MinSize), 0.1f);
                     }
                 }
             }
         }
 
-        //獲取當前物件
-        int num = (int)(scroll_pos / distance);
-        print(Weapon[num].name);
+        // //獲取當前物件
+        // int num = (int)(scroll_pos / distance);
+        // print(Weapon[num].name);
+        ShowInfo(distance);
     }
     private void Player2()
     {
@@ -111,14 +117,14 @@ public class Swipe : MonoBehaviour
         {
             if (scroll_pos > 0)
             {
-                scroll_pos -= 0.25f;
+                scroll_pos -= distance;
             }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (scroll_pos < 1)
             {
-                scroll_pos += 0.25f;
+                scroll_pos += distance;
             }
         }
         else
@@ -136,21 +142,31 @@ public class Swipe : MonoBehaviour
         {
             if (scroll_pos < pos[i] + distance / 2 && scroll_pos > pos[i] - distance / 2)
             {
-                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1, 1), 0.1f);
+                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(MaxSize, MaxSize), 0.1f);
 
                 for (int a = 0; a < pos.Length; a++)
                 {
                     if (a != i)
                     {
-                        transform.GetChild(a).localScale = Vector2.Lerp(transform.GetChild(a).localScale, new Vector2(0.65f, 0.65f), 0.1f);
+                        transform.GetChild(a).localScale = Vector2.Lerp(transform.GetChild(a).localScale, new Vector2(MinSize, MinSize), 0.1f);
                     }
                 }
             }
         }
 
-        //獲取當前物件
-        int num = (int)(scroll_pos / distance);
-        print(Weapon[num].name);
+        ShowInfo(distance);
     }
 
+    private void ShowInfo(float distance)
+    {
+        //獲取當前物件
+        int num = (int)(scroll_pos / distance);
+        //print(Weapon[num].name);
+        DataSO data = Weapon[num].GetComponent<DataSO>();
+        if (data != null)
+        {
+            Gear_name.text = data.name.ToString();
+            Gear_Description.text = data.description.ToString();
+        }
+    }
 }

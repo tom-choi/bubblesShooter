@@ -8,8 +8,11 @@ public class UI_CharactorDebug : MonoBehaviour
     // public Image Weapon_1_value;
     // public Color[] Color_1;
     // public int i;
-    public AudioSource Player_1_Change;
+    // public AudioSource Player_1_Change;
     public AudioSource Player_1_Ready;
+    public Image Player_1;
+    public Sprite Player_1_Idle;
+    public Sprite Player_1_OK;
     public bool P1R;
 
    //玩家二
@@ -17,13 +20,23 @@ public class UI_CharactorDebug : MonoBehaviour
     // public Image Weapon_2_value;
     // public Color[] Color_2;
     // public int j;
-    public AudioSource Player_2_Change;
+    // public AudioSource Player_2_Change;
     public AudioSource Player_2_Ready;
+    public Image Player_2;
+    public Sprite Player_2_Idle;
+    public Sprite Player_2_OK;
+
     public bool P2R;
 
     //進入戰鬥
     public AudioSource Battle_Start;
     public bool active;
+
+    private void Start() 
+    {
+      Player_1.sprite = Player_1_Idle;
+      Player_2.sprite = Player_2_Idle;
+    }
 
     // Update is called once per frame
     void Update()
@@ -66,6 +79,7 @@ public class UI_CharactorDebug : MonoBehaviour
           P1R = true;
           if(Player_1_Ready != null)
           {
+            Player_1.sprite = Player_1_OK;
             Player_1_Ready.Play();
           }
         }
@@ -109,6 +123,7 @@ public class UI_CharactorDebug : MonoBehaviour
           P2R = true;
           if(Player_2_Ready != null)
           {
+            Player_2.sprite = Player_2_OK;
             Player_2_Ready.Play();
           }
         }
