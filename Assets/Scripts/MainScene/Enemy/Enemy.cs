@@ -10,6 +10,16 @@ public class Enemy : MonoBehaviour
     public GameObject PlayerTarget;
     public Vector3 direction = Vector3.forward;
 
+    [SerializeField]
+    private GameObject bubblesPrefab;
+
+    private bool dieling = false;
+
+    private void Awake() 
+    {
+        bubblesPrefab.SetActive(false);
+    }
+
 
     private void FindNearestPlayer()
     {
@@ -34,11 +44,26 @@ public class Enemy : MonoBehaviour
         {
             FindNearestPlayer();
         }
-        if (PlayerTarget != null)
+        if (PlayerTarget != null && !dieling)
         {
             direction = (PlayerTarget.transform.position - transform.position).normalized;
         }
-        transform.Translate(direction * speed * Time.deltaTime);
+        if (!dieling)
+        {
+            transform.Translate(direction * speed * Time.deltaTime);   
+        }
+        else
+        {
+            // fly to the sky
+            transform.DOMoveY(20, 5f).OnComplete(() => Destroy(gameObject));
+        }
+    }
+    
+    public IEnumerator Die()
+    {
+        dieling = true;
+        bubblesPrefab.SetActive(true);
+        yield return null;
     }
 
 
@@ -57,7 +82,10 @@ public class Enemy : MonoBehaviour
         if (Health <= 0)
         {
             Health = 0;
-            Destroy(gameObject);
+            if (!dieling)
+            {
+                StartCoroutine(Die());
+            }
         }   
     }
 
