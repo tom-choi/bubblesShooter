@@ -7,16 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public int Health = 30;
     public float speed = 10f;
-    void OnCollisionEnter(Collision collision)
-    {
-        // 檢查碰撞的物件是否有標籤 "Bullet"
-        if (collision.gameObject.CompareTag("Barrage_Big"))
-        {
-            Debug.Log("Player hit by enemy bullet!");
-            SubtractHealth(collision.gameObject.GetComponent<Bullet>().damage); 
-            // Destroy(collision.gameObject);
-        }
-    }
+
 
     public void AddHealth(int val)
     {
