@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private Player player;
+    [SerializeField] private Player player;
+    [SerializeField] private Weapon weapon;
     public string moveType = "WASD";
 
     // Start is called before the first frame update
@@ -14,10 +14,29 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveTypeSelection();
+        WeaponControl();
+    }
+
+    void WeaponControl()
+    {
+        // 手槍發射
+        if (Input.GetKeyDown(KeyCode.E) && weapon.weaponType == Weapon.WeaponType.Pistol)
+        {
+            weapon.Fire();
+        }
+
+        // 充能控制
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            weapon.StartCharging();
+        }
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            weapon.StopCharging();
+        }
     }
 
     void MoveTypeSelection()
