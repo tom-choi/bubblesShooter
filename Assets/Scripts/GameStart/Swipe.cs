@@ -16,6 +16,7 @@ public class Swipe : MonoBehaviour
     public TMP_Text Gear_name;
     public TMP_Text Gear_Description;
 
+    public AudioSource GearChange;
     public bool player1;
     public bool player2;
 
@@ -58,6 +59,10 @@ public class Swipe : MonoBehaviour
             if (scroll_pos > 0)
             {
                 scroll_pos -= distance;
+                if(GearChange != null)
+                {
+                    GearChange.Play();
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
@@ -65,6 +70,10 @@ public class Swipe : MonoBehaviour
             if (scroll_pos < 1)
             {
                 scroll_pos += distance;
+                if(GearChange != null)
+                {
+                    GearChange.Play();
+                }
             }
         }
         else
@@ -118,6 +127,10 @@ public class Swipe : MonoBehaviour
             if (scroll_pos > 0)
             {
                 scroll_pos -= distance;
+                if(GearChange != null)
+                {
+                    GearChange.Play();
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -125,6 +138,10 @@ public class Swipe : MonoBehaviour
             if (scroll_pos < 1)
             {
                 scroll_pos += distance;
+                if(GearChange != null)
+                {
+                    GearChange.Play();
+                }
             }
         }
         else
