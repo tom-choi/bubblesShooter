@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Weapon : MonoBehaviour
-{
-    public enum WeaponType
+
+public enum WeaponType
     {
         Pistol,
         SingleShot
     }
 
+public class Weapon : MonoBehaviour
+{
+
     public WeaponType weaponType;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Sprite WeaponSprite;
     
     public int maxAmmo = 12;
     public int currentAmmo;

@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     // UI
     [SerializeField]
     public PlayerIconUI playerIconUI; // 玩家UI
+    public PlayerController playerController; // 玩家控制器
+    public HealthBar healthBar; // 血條
 
     void Start()
     {
@@ -30,8 +32,6 @@ public class Player : MonoBehaviour
     }
     public void initSkill()
     {
-
-
         isPlayerDataLoaded = true;
     }
     
@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         {
             Health = 100;
         }
+        healthBar.SetHealth((float)Health / 100.0f);
     }
     
     public void SubtractHealth(int val)
@@ -57,5 +58,6 @@ public class Player : MonoBehaviour
         {
             Health = 0;
         }
+        healthBar.SetHealth((float)Health / 100.0f);
     }
 }

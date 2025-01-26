@@ -11,11 +11,13 @@ public class SkillUI : MonoBehaviour
     public TextMeshProUGUI skillNameUI;
 
     public Image coolDownImage;
+    public TextMeshProUGUI coolDownText;
     public Image skillImage;
 
     [SerializeField]
     private Skill skillCache;
     public int skillIndex;
+
     void Start()
     {
         
@@ -38,24 +40,30 @@ public class SkillUI : MonoBehaviour
     {
         if (isSkillEnable)
         {
-
-            StartCoroutine(skillCooddown());
+            StartCoroutine(skillCooldown());
             isSkillEnable = false;
             skillImage.enabled = false;
+            coolDownText.gameObject.SetActive(true); // 显示冷却时间文本
         }
     }
 
-    public IEnumerator skillCooddown()
+    public IEnumerator skillCooldown()
     {
         float coolDownTime = 5f;
         float coolDownTimer = coolDownTime;
+
         while (coolDownTimer > 0)
         {
             coolDownTimer -= Time.deltaTime;
+
             coolDownImage.fillAmount = coolDownTimer / coolDownTime;
+
+            coolDownText.text = Mathf.Ceil(coolDownTimer).ToString() + "s";
+
             yield return null;
         }
-        skillImage.enabled = true;
-    }
 
+        skillImage.enabled = true;
+        coolDownText.gameObject.SetActive(false);
+    }
 }
