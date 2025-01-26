@@ -13,7 +13,7 @@ public class UI_CharactorDebug : MonoBehaviour
     public Image Player_1;
     public Sprite Player_1_Idle;
     public Sprite Player_1_OK;
-    public bool P1R;
+    public bool P1R; //玩家一準備
 
    //玩家二
     // public Image Weapon_2;
@@ -26,7 +26,7 @@ public class UI_CharactorDebug : MonoBehaviour
     public Sprite Player_2_Idle;
     public Sprite Player_2_OK;
 
-    public bool P2R;
+    public bool P2R; //玩家二準備
 
     //進入戰鬥
     public AudioSource Battle_Start;
@@ -76,9 +76,9 @@ public class UI_CharactorDebug : MonoBehaviour
         //玩家一準備
         if(Input.GetKeyDown(KeyCode.E) && active)
         {
-          P1R = true;
-          if(Player_1_Ready != null)
+          if(Player_1_Ready != null && !P1R)
           {
+            P1R = true;
             Player_1.sprite = Player_1_OK;
             Player_1_Ready.Play();
           }
@@ -120,9 +120,9 @@ public class UI_CharactorDebug : MonoBehaviour
         //玩家二準備
         if(Input.GetKeyDown(KeyCode.Keypad0) && active)
         {
-          P2R = true;
-          if(Player_2_Ready != null)
+          if(Player_2_Ready != null && !P2R)
           {
+            P2R = true;
             Player_2.sprite = Player_2_OK;
             Player_2_Ready.Play();
           }

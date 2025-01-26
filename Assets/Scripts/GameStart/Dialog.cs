@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Bubble_UI : MonoBehaviour
+public class Dialog : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public TMP_Text dialog;
+    public TextAsset textFile;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = Vector2.up * Random.Range(300,450);
+        
     }
 
     // Update is called once per frame

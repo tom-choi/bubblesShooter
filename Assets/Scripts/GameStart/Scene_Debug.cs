@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Scene_Debug : MonoBehaviour
 {
+    public CreateBubble createBubble;
     public UI_CharactorDebug uI_CharactorDebug;
     public CanvasGroup MainScene;
     public CanvasGroup CharactorScene;
     public AudioSource GameStartAudio;
-    public bool gamestart;
-    public bool battlestart;
-    public bool canchoosecharactor;
+    public bool gamestart; //進入遊戲音效判定
+    public bool battlestart; //進入戰鬥音效判定
+    public bool canchoosecharactor; //可以選擇角色
     public float WaitTime;
 
     public string levelname;
@@ -28,6 +29,10 @@ public class Scene_Debug : MonoBehaviour
     {
         if(Input.anyKey)
         {
+            if(!createBubble.canStartNow)
+            {
+                return;
+            }
             // MainScene.DOFade(0,0.5f);
             // CharactorScene.DOFade(1,0.5f);
             if(!gamestart && GameStartAudio != null)
