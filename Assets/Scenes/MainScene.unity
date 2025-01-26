@@ -682,7 +682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29248865}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2978533, y: -0.000000028449646, z: 0.000000008876721, w: 0.95461166}
+  m_LocalRotation: {x: 0.2978533, y: -0.000000028449644, z: 0.00000000887672, w: 0.95461166}
   m_LocalPosition: {x: 0, y: 7.1, z: -10.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16592,7 +16592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838205098}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2978533, y: -0.000000028449646, z: 0.000000008876721, w: 0.95461166}
+  m_LocalRotation: {x: 0.2978533, y: -0.000000028449644, z: 0.00000000887672, w: 0.95461166}
   m_LocalPosition: {x: 0, y: 7.1, z: -10.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -40942,10 +40942,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2139785000}
     m_Modifications:
+    - target: {fileID: 3841118162995517373, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5273224970865208584, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
         type: 3}
       propertyPath: m_text
-      value: 00:00:00.000
+      value: 00:00.000
       objectReference: {fileID: 0}
     - target: {fileID: 6845554830071035570, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
         type: 3}
@@ -41030,12 +41035,12 @@ PrefabInstance:
     - target: {fileID: 6950068524166184335, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 650.9059
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6950068524166184335, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 479.37445
+      value: -494.8
       objectReference: {fileID: 0}
     - target: {fileID: 6950068524166184335, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
         type: 3}
@@ -41060,7 +41065,12 @@ PrefabInstance:
     - target: {fileID: 7786937794899098474, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.9022
+      value: -0.000021696
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786937794899098474, guid: 9010c37b19aa7e942b4ee3d2ce837f1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9.1859e-11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

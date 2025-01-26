@@ -37,7 +37,7 @@ public class CountdownTimer : MonoBehaviour
         }
 
         // 倒計時結束時的處理
-        timerText.text = "00:00:00.000";
+        timerText.text = "00:00.000";
     }
     void UpdateTimerText(float time)
     {
@@ -81,7 +81,7 @@ public class CountdownTimer : MonoBehaviour
             {
                 timerText.DOColor(Color.red, 0.2f).OnComplete(() =>
                 {
-                    timerText.DOColor(Color.white, 0.2f);
+                    timerText.DOColor(Color.black, 0.2f);
                 });
                 yield return new WaitForSeconds(0.5f);
             }
