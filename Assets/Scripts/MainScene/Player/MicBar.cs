@@ -14,17 +14,19 @@ public class MicBar : MonoBehaviour
     public GameObject qte1;
     public GameObject qte2;
 
-    private float stPx1 = 1321.0f, stPy1 = 118.08f, edPx1 = 1611.0f, edPy1 = 118.08f;
-    private float stPx2 = 597.90f, stPy2 = 110.99f, edPx2 = 307.90f, edPy2 = 110.99f;
+    private float stPx2 = 1321.0f, stPy2 = 0.08f, edPx2 = 1611.0f, edPy2 = 0.08f;
+    private float stPx1 = 597.90f, stPy1 = 0.99f, edPx1 = 307.90f, edPy1 = 0.99f;
 
     private RectTransform judgeRect;
     private bool isCharging = false;
     private float chargeDuration = 2f; // 充能持續時間
     private Tweener judgeTween;
+    private Tweener fillTween;
 
     public void Start()
     {
         judgeRect = QTEJudge.GetComponent<RectTransform>();
+        image.fillAmount = 0;
         StartCoroutine(readyforupdateQTE());
     }
     
@@ -36,7 +38,6 @@ public class MicBar : MonoBehaviour
 
     void Update()
     {
-        // 監聽充能開始和結束
         if (player.playerController.weapon.isCharging && !isCharging)
         {
             StartCharging();
@@ -76,20 +77,25 @@ public class MicBar : MonoBehaviour
         {
             judgeRect.anchoredPosition = new Vector2(stPx2, stPy2);
         }
+        image.fillAmount = 0;
     }
 
     private void StartCharging()
     {
         isCharging = true;
-        int playerType = player.playerController.weapon.weaponType == WeaponType.SingleShot ? 1 : 2;
+        int playerType = player.PlayerID;
 
         // 根據玩家類型設置終點
         Vector2 endPosition = playerType == 1 
             ? new Vector2(edPx1, edPy1) 
             : new Vector2(edPx2, edPy2);
 
-        // 創建移動動畫
+        // QTEJudge移動動畫
         judgeTween = judgeRect.DOAnchorPos(endPosition, chargeDuration)
+            .SetEase(Ease.Linear);
+
+        // Image fillAmount動畫
+        fillTween = DOTween.To(() => image.fillAmount, x => image.fillAmount = x, 1f, chargeDuration)
             .SetEase(Ease.Linear);
     }
 
@@ -100,9 +106,13 @@ public class MicBar : MonoBehaviour
         {
             judgeTween.Kill();
         }
+        if (fillTween != null)
+        {
+            fillTween.Kill();
+        }
 
-        // 重置位置
-        int playerType = player.playerController.weapon.weaponType == WeaponType.SingleShot ? 1 : 2;
+        // 重置位置和fillAmount
+        int playerType = player.PlayerID;
         ResetJudgePosition(playerType);
     }
 }

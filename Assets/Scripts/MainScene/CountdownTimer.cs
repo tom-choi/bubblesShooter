@@ -55,23 +55,23 @@ public class CountdownTimer : MonoBehaviour
             // 播放倒計時聲效
             // 4m
             Debug.Log("Player Sound");
-            if (countdownTime <= 240 && countdownTime > 180)
+            if (countdownTime <= 250 && countdownTime > 180)
             {
                 countdownSound_4m.Play();
             }
             // 3m
-            else if (countdownTime <= 180 && countdownTime > 120)
+            else if (countdownTime <= 190 && countdownTime > 120)
             {
                 countdownSound_3m.Play();
 
             }
             // 2m
-            else if (countdownTime <= 120 && countdownTime > 60)
+            else if (countdownTime <= 130 && countdownTime > 60)
             {
                 countdownSound_2m.Play();
             }
             // 1m
-            else if (countdownTime <= 60 && countdownTime > 40)
+            else if (countdownTime <= 70 && countdownTime > 40)
             {
                 countdownSound_1m.Play();
             }

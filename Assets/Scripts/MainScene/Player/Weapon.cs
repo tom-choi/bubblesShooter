@@ -25,6 +25,8 @@ public class Weapon : MonoBehaviour
     
     public bool isCharging; // 充能狀態
     private bool isQTESuccess = false;
+
+    [SerializeField] public AudioSource weaponSound; // 音效播放器
     
     private PlayerMicInput micInput;
     
@@ -45,6 +47,7 @@ public class Weapon : MonoBehaviour
         if (weaponType == WeaponType.Pistol)
         {
             GameObject bullet = ObjectPool.Instance.SpawnFromPool("FortBullet_auto", firePoint.position, firePoint.rotation);
+            weaponSound.Play(); // 播放槍聲音效
             currentAmmo--;
         }
     }
