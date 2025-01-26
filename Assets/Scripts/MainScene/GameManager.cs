@@ -46,41 +46,45 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // 获取随机生成位置
     private Vector3 GetRandomSpawnPosition()
     {
+        // 获取地图大小的一半
         float halfSize = mapSize / 2f;
         Vector3 spawnPos;
 
         // 隨機選擇生成在哪一邊
         int side = Random.Range(0, 4);
+
+        int hight = 3;
         
         switch (side)
         {
             case 0: // 上邊
                 spawnPos = new Vector3(
                     Random.Range(-halfSize, halfSize),
-                    0,
+                    hight,
                     halfSize
                 );
                 break;
             case 1: // 右邊
                 spawnPos = new Vector3(
                     halfSize,
-                    0,
+                    hight,
                     Random.Range(-halfSize, halfSize)
                 );
                 break;
             case 2: // 下邊
                 spawnPos = new Vector3(
                     Random.Range(-halfSize, halfSize),
-                    0,
+                    hight,
                     -halfSize
                 );
                 break;
             default: // 左邊
                 spawnPos = new Vector3(
                     -halfSize,
-                    0,
+                    hight,
                     Random.Range(-halfSize, halfSize)
                 );
                 break;
