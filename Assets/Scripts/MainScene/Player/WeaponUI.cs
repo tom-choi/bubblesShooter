@@ -56,7 +56,7 @@ public class WeaponUI : MonoBehaviour
         }
         else // Above 50%
         {
-            ammoText.DOColor(Color.white, 0.5f);
+            ammoText.DOColor(Color.black, 0.5f);
         }
     }
 }
