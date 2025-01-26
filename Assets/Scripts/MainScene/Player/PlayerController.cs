@@ -26,17 +26,17 @@ public class PlayerController : MonoBehaviour
         {
             case "WASD":
                 // 手槍發射
-                if (Input.GetKeyDown(KeyCode.Q) && weapon.weaponType == WeaponType.Pistol)
+                if (Input.GetKeyDown(KeyCode.E) && weapon.weaponType == WeaponType.Pistol)
                 {
                     weapon.Fire();
                 }
 
                 // 充能控制
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.R))
                 {
                     weapon.StartCharging();
                 }
-                if (Input.GetKeyUp(KeyCode.P))
+                if (Input.GetKeyUp(KeyCode.R))
                 {
                     weapon.StopCharging();
                 }
