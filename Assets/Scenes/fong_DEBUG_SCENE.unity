@@ -1299,7 +1299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u70AE\u53F0\u6975"
+  gear_Description: "\u5168\u65B9\u4F4D\u767C\u5C04\u6CE1\u6CE1"
 --- !u!1 &162880140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &171569618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1438,7 +1439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.39607844, g: 0.39607844, b: 0.39607844, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1471,7 +1472,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171569617}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1811,7 +1812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u6A5F"
+  gear_Description: "\u53EF\u4EE5\u9023\u7E8C\u5C04\u64CA"
 --- !u!1 &214340175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u81EA\u52D5\u70AE\u53F0"
+  gear_Description: "\u81EA\u52D5\u7784\u6E96\u767C\u5C04\u6CE1\u6CE1"
 --- !u!1 &373883564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,7 +2865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u68D2"
+  gear_Description: "\u5FFD\u5927\u5FFD\u5C0F\u7684\u6CE1\u6CE1"
 --- !u!1 &377261333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,7 +3190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u70AE\u53F0"
+  gear_Description: "\u767C\u5C04\u5341\u5B57\u6CE1\u6CE1"
 --- !u!1 &431906600
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,10 +3618,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4281,10 +4286,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4309,8 +4314,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4416,10 +4421,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4582,7 +4587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u8F5F\u70B8\u4FE1\u6A19"
+  gear_Description: "\u5411\u76EE\u6A19\u767C\u5C04\u5927\u91CF\u6CE1\u6CE1"
 --- !u!1 &597566846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,10 +4751,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4773,8 +4779,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4911,7 +4917,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u52A0\u8FB2\u70AE"
+  gear_Description: "\u767C\u5C04\u5DE8\u5927\u6CE1\u6CE1"
 --- !u!1 &688054833
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,7 +5453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u70AE\u64CA\u4FE1\u6A19"
+  gear_Description: "\u5411\u76EE\u6A19\u767C\u5C04\u8D85\u5927\u578B\u6CE1\u6CE1"
 --- !u!1 &790992172
 GameObject:
   m_ObjectHideFlags: 0
@@ -5579,10 +5587,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5607,8 +5615,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5745,7 +5753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u6A5F"
+  gear_Description: "\u53EF\u4EE5\u9023\u7E8C\u5C04\u64CA"
 --- !u!1 &825262409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,7 +5843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u70AE\u53F0\u6975"
+  gear_Description: "\u5168\u65B9\u4F4D\u767C\u5C04\u6CE1\u6CE1"
 --- !u!1 &844960048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,8 +6303,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6449,7 +6459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u68D2"
+  gear_Description: "\u5FFD\u5927\u5FFD\u5C0F\u7684\u6CE1\u6CE1"
 --- !u!1 &993064651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6935,10 +6946,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6963,8 +6974,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8215,10 +8226,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8243,8 +8254,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8381,7 +8392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u81EA\u52D5\u70AE\u53F0"
+  gear_Description: "\u81EA\u52D5\u7784\u6E96\u767C\u5C04\u6CE1\u6CE1"
 --- !u!1 &1389897461
 GameObject:
   m_ObjectHideFlags: 0
@@ -8432,7 +8444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.39607844, g: 0.39607844, b: 0.39607844, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9307,7 +9319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u52A0\u8FB2\u70AE"
+  gear_Description: "\u767C\u5C04\u5DE8\u5927\u6CE1\u6CE1"
 --- !u!1 &1535801474
 GameObject:
   m_ObjectHideFlags: 0
@@ -9552,7 +9565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570466471
@@ -9575,10 +9588,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10357,7 +10370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756360774
@@ -10380,10 +10393,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10524,7 +10537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11466,7 +11479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u70AE\u64CA\u4FE1\u6A19"
+  gear_Description: "\u5411\u76EE\u6A19\u767C\u5C04\u8D85\u5927\u578B\u6CE1\u6CE1"
 --- !u!1 &1985636328
 GameObject:
   m_ObjectHideFlags: 0
@@ -11524,10 +11538,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11836,10 +11850,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11864,8 +11878,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12128,7 +12142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u6CE1\u6CE1\u70AE\u53F0"
+  gear_Description: "\u767C\u5C04\u5341\u5B57\u6CE1\u6CE1"
 --- !u!1 &2052373310
 GameObject:
   m_ObjectHideFlags: 0
@@ -12322,7 +12337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902dca70f877764c8cdbffc7d28767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSO: {fileID: 11400000, guid: 75f2148bc8af8d44e9875ed7ea4be1e1, type: 2}
+  gear_Name: "\u8F5F\u70B8\u4FE1\u6A19"
+  gear_Description: "\u5411\u76EE\u6A19\u767C\u5C04\u5927\u91CF\u6CE1\u6CE1"
 --- !u!1 &2091913824
 GameObject:
   m_ObjectHideFlags: 0
@@ -12570,7 +12586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117179873
@@ -12593,10 +12609,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7843cab03dc322e4b827324d6a7267ee, type: 2}
-  m_sharedMaterial: {fileID: 3549024450704622827, guid: 7843cab03dc322e4b827324d6a7267ee,
+  m_fontAsset: {fileID: 11400000, guid: 5a21d6ec38317bc41a542a450dbb88f1, type: 2}
+  m_sharedMaterial: {fileID: -9186366154980473620, guid: 5a21d6ec38317bc41a542a450dbb88f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

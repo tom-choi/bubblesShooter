@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Gear : MonoBehaviour
 {
-    public DataSO dataSO;
+    public string gear_Name;
+    [TextArea(3,10)]
+    public string gear_Description;
     // Start is called before the first frame update
     void Start()
     {

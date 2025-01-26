@@ -161,12 +161,9 @@ public class Swipe : MonoBehaviour
     {
         //獲取當前物件
         int num = (int)(scroll_pos / distance);
-        //print(Weapon[num].name);
-        DataSO data = Weapon[num].GetComponent<DataSO>();
-        if (data != null)
-        {
-            Gear_name.text = data.name.ToString();
-            Gear_Description.text = data.description.ToString();
-        }
+        //print(Weapon[num].GetComponent<Gear>().gear_Name);
+        Gear_name.text = Weapon[num].GetComponent<Gear>().gear_Name.ToString();
+        Gear_Description.text = Weapon[num].GetComponent<Gear>().gear_Description.ToString();
+        
     }
 }
