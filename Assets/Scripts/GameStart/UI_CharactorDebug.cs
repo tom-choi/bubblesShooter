@@ -13,6 +13,8 @@ public class UI_CharactorDebug : MonoBehaviour
     public Image Player_1;
     public Sprite Player_1_Idle;
     public Sprite Player_1_OK;
+    public GameObject Player_1_notReady;
+    public GameObject Player_1_isReady;
     public bool P1R; //玩家一準備
 
    //玩家二
@@ -25,6 +27,8 @@ public class UI_CharactorDebug : MonoBehaviour
     public Image Player_2;
     public Sprite Player_2_Idle;
     public Sprite Player_2_OK;
+    public GameObject Player_2_notReady;
+    public GameObject Player_2_isReady;
 
     public bool P2R; //玩家二準備
 
@@ -36,6 +40,10 @@ public class UI_CharactorDebug : MonoBehaviour
     {
       Player_1.sprite = Player_1_Idle;
       Player_2.sprite = Player_2_Idle;
+      Player_1_notReady.SetActive(true);
+      Player_1_isReady.SetActive(false);
+      Player_2_notReady.SetActive(true);
+      Player_2_isReady.SetActive(false);
     }
 
     // Update is called once per frame
@@ -80,6 +88,8 @@ public class UI_CharactorDebug : MonoBehaviour
           {
             P1R = true;
             Player_1.sprite = Player_1_OK;
+            Player_1_isReady.SetActive(true);
+            Player_1_notReady.SetActive(false);
             Player_1_Ready.Play();
           }
         }
@@ -124,6 +134,8 @@ public class UI_CharactorDebug : MonoBehaviour
           {
             P2R = true;
             Player_2.sprite = Player_2_OK;
+            Player_2_isReady.SetActive(true);
+            Player_2_notReady.SetActive(false);
             Player_2_Ready.Play();
           }
         }

@@ -10,6 +10,8 @@ public class Scene_Debug : MonoBehaviour
     public CanvasGroup MainScene;
     public CanvasGroup CharactorScene;
     public AudioSource GameStartAudio;
+    public AudioSource BGM;
+    public AudioSource Dialog;
     public bool gamestart; //進入遊戲音效判定
     public bool battlestart; //進入戰鬥音效判定
     public bool canchoosecharactor; //可以選擇角色
@@ -39,6 +41,8 @@ public class Scene_Debug : MonoBehaviour
             {
                 gamestart = true;
                 GameStartAudio.Play();
+                Dialog.Stop();
+                BGM.Stop();
             }
             StartCoroutine(GameStart(WaitTime));
         }
