@@ -26,6 +26,23 @@ public class PlayerController : MonoBehaviour
         {
             case "WASD":
                 // 手槍發射
+                if (Input.GetKeyDown(KeyCode.Q) && weapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    weapon.Fire();
+                }
+
+                // 充能控制
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    weapon.StartCharging();
+                }
+                if (Input.GetKeyUp(KeyCode.P))
+                {
+                    weapon.StopCharging();
+                }
+                break;
+            case "UDLR":
+                // 手槍發射
                 if (Input.GetKeyDown(KeyCode.O) && weapon.weaponType == Weapon.WeaponType.Pistol)
                 {
                     weapon.Fire();
@@ -37,23 +54,6 @@ public class PlayerController : MonoBehaviour
                     weapon.StartCharging();
                 }
                 if (Input.GetKeyUp(KeyCode.P))
-                {
-                    weapon.StopCharging();
-                }
-                break;
-            case "UDLR":
-                // 手槍發射
-                if (Input.GetKeyDown(KeyCode.RightShift) && weapon.weaponType == Weapon.WeaponType.Pistol)
-                {
-                    weapon.Fire();
-                }
-
-                // 充能控制
-                if (Input.GetKeyDown(KeyCode.RightControl))
-                {
-                    weapon.StartCharging();
-                }
-                if (Input.GetKeyUp(KeyCode.RightControl))
                 {
                     weapon.StopCharging();
                 }
