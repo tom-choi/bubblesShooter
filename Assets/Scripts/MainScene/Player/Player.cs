@@ -2,22 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq.Expressions;
 
 public class Player : MonoBehaviour
 {
     public int Health = 100;
     public float speed = 10f;
-    public GameObject PlayerModel;
+    public GameObject PlayerModel;  
+
+    public List<Skill> skills;
+
+    public bool isPlayerDataLoaded = false;
     // public CanvasGroup canvasGroup;
     
 
     [SerializeField]
     private GameObject holo; // 光圈
 
+    // UI
+    [SerializeField]
+    public PlayerIconUI playerIconUI; // 玩家UI
+
     void Start()
     {
-        // dotween 設定
-        // canvasGroup.DOFade(0, 0.5f);
+        // ReadData
+        initSkill();
+    }
+    public void initSkill()
+    {
+
+
+        isPlayerDataLoaded = true;
     }
     
     // 更新函数
