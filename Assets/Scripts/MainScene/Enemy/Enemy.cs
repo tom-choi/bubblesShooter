@@ -54,16 +54,16 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            // fly to the sky
-            transform.DOMoveY(20, 5f).OnComplete(() => Destroy(gameObject));
+
         }
     }
     
-    public IEnumerator Die()
+    public void Die()
     {
         dieling = true;
         bubblesPrefab.SetActive(true);
-        yield return null;
+        // fly to the sky
+        transform.DOMoveY(20, 5f).OnComplete(() => Destroy(gameObject));
     }
 
 
@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour
             Health = 0;
             if (!dieling)
             {
-                StartCoroutine(Die());
+                Die();
             }
         }   
     }

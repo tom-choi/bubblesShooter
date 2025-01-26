@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Player player;
-    [SerializeField] private Weapon weapon;
+    [SerializeField] public Weapon weapon;
     public string moveType = "WASD";
 
     // Start is called before the first frame update
@@ -26,24 +26,24 @@ public class PlayerController : MonoBehaviour
         {
             case "WASD":
                 // 手槍發射
-                if (Input.GetKeyDown(KeyCode.Q) && weapon.weaponType == Weapon.WeaponType.Pistol)
+                if (Input.GetKeyDown(KeyCode.E) && weapon.weaponType == WeaponType.Pistol)
                 {
                     weapon.Fire();
                 }
 
                 // 充能控制
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.R))
                 {
                     weapon.StartCharging();
                 }
-                if (Input.GetKeyUp(KeyCode.P))
+                if (Input.GetKeyUp(KeyCode.R))
                 {
                     weapon.StopCharging();
                 }
                 break;
             case "UDLR":
                 // 手槍發射
-                if (Input.GetKeyDown(KeyCode.O) && weapon.weaponType == Weapon.WeaponType.Pistol)
+                if (Input.GetKeyDown(KeyCode.O) && weapon.weaponType == WeaponType.Pistol)
                 {
                     weapon.Fire();
                 }

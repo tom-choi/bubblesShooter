@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+public enum WeaponType
+{
+    Pistol,
+    SingleShot
+}
+
 public class Weapon : MonoBehaviour
 {
-    public enum WeaponType
-    {
-        Pistol,
-        SingleShot
-    }
 
     public WeaponType weaponType;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Sprite WeaponSprite;
     
     public int maxAmmo = 12;
     public int currentAmmo;
@@ -21,7 +23,7 @@ public class Weapon : MonoBehaviour
     public float maxChargeTime = 2f;     // 最大充能時間
     private float currentChargeTime = 0f;
     
-    private bool isCharging = false;
+    public bool isCharging; // 充能狀態
     private bool isQTESuccess = false;
     
     private PlayerMicInput micInput;
