@@ -18,7 +18,6 @@ public class CreateBubble : MonoBehaviour
 
     public CanvasGroup startGame;
     public bool canStartNow; //可以開始遊戲
-    public AudioSource openning;
     public float openningTime;
     // Start is called before the first frame update
     void Start()
